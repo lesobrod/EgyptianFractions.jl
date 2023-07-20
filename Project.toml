@@ -1,7 +1,7 @@
 name = "EgyptianFractions"
 uuid = "0f160d28-7819-5803-9275-299e9913be39"
-authors = ["Phil Killewald <phil@killewald.net>"]
-version = "0.2.2"
+authors = ["Phil Killewald <phil@killewald.net>", "Denis Ivanov <ivanovdenis710616@gmail.com>"]
+version = "0.3.1"
 
 [compat]
 julia = "1"
