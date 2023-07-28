@@ -6,12 +6,14 @@ using Base.MathConstants: golden, eulergamma, catalan
 
 # Simple edge cases are easiest
 @test efgreedy(0) == []
+@test efshortest(0) == []
 @test efoddgreedy(0) == [] # works because Julia assumes Rational(0) == 0//1
 @test efharmonic(0) == []
 @test engelexpand(0) == []
 @test efengel(0) == []
 
 @test efgreedy(1) == [1]
+@test efshortest(1) == [1]
 @test efoddgreedy(1) == [1]
 @test efharmonic(1) == [1] # harmonic series starts at 2
 @test engelexpand(1) == [1]
@@ -33,6 +35,18 @@ for i in 1:size(r8, 1)
 
   efg = efgreedy(n//d)
   @test sum(1 .// efg) == n//d
+end
+
+for i in 1:size(r8, 1)
+  n = Int(r8[i, 1])
+  d = Int(r8[i, 2])
+  d = (d == 0) ? 1 : d
+
+  # Simple
+  @test efshortest(1//d) == [d]
+
+  efs = efshortest(n//d)
+  @test sum(1 .// efs) == n//d
 end
 
 for i in 1:size(r8, 1)
