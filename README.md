@@ -123,6 +123,10 @@ efgreedy(5//121)  # [25, 757, 763309, 873960180913, 1527612795642093418846225]
 
 When, as seen before, `[33, 121, 163]` would be a much more sensible expansion.
 
+### Shortest length expansion
+
+### Generalized (mixed sign) shortest length expansion
+
 ### Odd greedy expansion
 
 This algorithm acts identically to the greedy algorithm, but it greedily chooses the largest possible odd unit fraction.  It only works if the (reduced) denominator of the input rational is odd.  If it were applied to a rational number with an even denominator, the resulting expansion would never converge.  This algorithm may produce expansions that are shorter than those produced using the generic greedy expansion.  For example:
